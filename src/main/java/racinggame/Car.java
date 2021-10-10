@@ -6,9 +6,9 @@ public class Car {
 	private final Name name;
 	private Position position;
 
-	public Car(Name name, Position position) {
-		this.name = name;
-		this.position = position;
+	public Car(String name, int position) {
+		this.name = new Name(name);
+		this.position = new Position(position);
 	}
 
 	public void drive(DrivingStrategy drivingStrategy) {

@@ -18,9 +18,9 @@ class WinnersTest {
 		// given
 		Cars cars = new Cars(
 			Arrays.asList(
-				new Car(new Name("pobi"), new Position(7)),
-				new Car(new Name("crong"), new Position(7)),
-				new Car(new Name("honux"), new Position(5))
+				new Car("pobi", 7),
+				new Car("crong", 7),
+				new Car("honux", 5)
 			)
 		);
 

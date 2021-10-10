@@ -14,7 +14,7 @@ public class Cars {
 
 		String[] names = namesWithComma.split(DELIMITER);
 		for (String name : names) {
-			values.add(new Car(new Name(name), new Position(INITIAL_POSITION_VALUE)));
+			values.add(new Car(name, INITIAL_POSITION_VALUE));
 		}
 
 		this.values = values;
