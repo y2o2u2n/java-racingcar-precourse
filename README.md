@@ -78,7 +78,7 @@
 - `CarRacingGame`
     - [x] 주어진 `NumberOfRounds` 동안 `Cars`를 `drive`할 수 있다.
     - [x] 라운드 마다 `Records`를 출력한다.
-    - [x] 완료한 후 누가 우승했는지 출력한다.
+    - [x] 완료한 후 `Winners`를 출력한다.
     - [ ] 사용자 입력이 잘못된 경우 에러 메세지를 출력 후 입력을 다시 받는다.
 - `NumberOfRounds`
     - [x] `Cars`가 `drive`할 횟수이며 사용자 입력으로 주어진다.
