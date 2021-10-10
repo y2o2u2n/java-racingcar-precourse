@@ -72,7 +72,7 @@
     - [x] 0~9 사이의 랜덤 값을 구한 후 4 이상일 경우 `movable`하다.
 - `Cars`
     - [x] 자동차 이름이 사용자 입력으로 주어졌을 때 ','로 구분한다.
-    - [ ] `Car`들을 `drive`할 수 있다.
+    - [x] `Car`들을 `drive`할 수 있다.
 - `Winners`
     - [x] `Cars`로 우승자들을 알 수 있다.
 - `CarRacingGame`

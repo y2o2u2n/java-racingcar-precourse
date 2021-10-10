@@ -23,4 +23,36 @@ class CarsTest {
 			() -> assertThat(cars.getValues()).hasSize(namesWithComma.split(",").length)
 		);
 	}
+
+	@DisplayName("자동차들을 운전해서 전진할 수 있다.")
+	@ParameterizedTest
+	@ValueSource(strings = {"pobi,crong,honux"})
+	void drive_forward(String namesWithComma) {
+		// given
+		Cars cars = new Cars(namesWithComma);
+
+		// when
+		cars.drive(() -> true);
+
+		// then
+		for (Car car : cars.getValues()) {
+			assertThat(car.getPosition()).isEqualTo(new Position(1));
+		}
+	}
+
+	@DisplayName("자동차들을 운전해서 멈출 수 있다.")
+	@ParameterizedTest
+	@ValueSource(strings = {"pobi,crong,honux"})
+	void drive_stop(String namesWithComma) {
+		// given
+		Cars cars = new Cars(namesWithComma);
+
+		// when
+		cars.drive(() -> false);
+
+		// then
+		for (Car car : cars.getValues()) {
+			assertThat(car.getPosition()).isEqualTo(new Position(0));
+		}
+	}
 }

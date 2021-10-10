@@ -25,6 +25,12 @@ public class Cars {
 		this.values = values;
 	}
 
+	public void drive(DrivingStrategy drivingStrategy) {
+		for (Car car : values) {
+			car.drive(drivingStrategy);
+		}
+	}
+
 	public boolean isEmpty() {
 		return values.isEmpty();
 	}
