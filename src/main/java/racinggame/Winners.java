@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Winners {
 	private static final String DELIMITER = ",";
-	private static final String MESSAGE_FORMAT = "최종 우승자는 %s 입니다";
+	private static final String MESSAGE_FORMAT = "최종 우승자는 %s 입니다.";
 
 	private final List<Car> values;
 
