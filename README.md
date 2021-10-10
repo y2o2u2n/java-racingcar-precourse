@@ -76,8 +76,10 @@
 - `Winners`
     - [x] `Cars`로 우승자들을 알 수 있다.
 - `CarRacingGame`
-    - [ ] 주어진 `NumberOfRounds` 동안 `Cars`를 `drive`할 수 있다.
-    - [ ] 완료한 후 누가 우승했는지 알려준다.
+    - [x] 주어진 `NumberOfRounds` 동안 `Cars`를 `drive`할 수 있다.
+    - [ ] 라운드 마다 실행 결과를 출력한다.
+    - [x] 완료한 후 누가 우승했는지 출력한다.
+    - [ ] 사용자 입력이 잘못된 경우 에러 메세지를 출력 후 입력을 다시 받는다.
 - `NumberOfRounds`
     - [x] `Cars`가 `drive`할 횟수이며 사용자 입력으로 주어진다.
     - [x] 값은 0 이상이다.

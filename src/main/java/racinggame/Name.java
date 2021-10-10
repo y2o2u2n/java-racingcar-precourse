@@ -1,5 +1,7 @@
 package racinggame;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Name {
@@ -15,6 +17,16 @@ public class Name {
 		}
 
 		this.value = value;
+	}
+
+	public static String join(String delimiter, List<Name> names) {
+		List<String> strings = new ArrayList<>();
+
+		for (Name name : names) {
+			strings.add(name.getValue());
+		}
+
+		return String.join(delimiter, strings);
 	}
 
 	public String getValue() {

@@ -5,6 +5,9 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Winners {
+	private static final String DELIMITER = ",";
+	private static final String MESSAGE_FORMAT = "최종 우승자는 %s 입니다";
+
 	private final List<Car> values;
 
 	public Winners(Cars cars) {
@@ -46,5 +49,15 @@ public class Winners {
 
 		positions.sort(Comparator.reverseOrder());
 		return positions.get(0);
+	}
+
+	public String toMessage() {
+		List<Name> names = new ArrayList<>();
+
+		for (Car car : values) {
+			names.add(car.getName());
+		}
+
+		return String.format(MESSAGE_FORMAT, Name.join(DELIMITER, names));
 	}
 }
