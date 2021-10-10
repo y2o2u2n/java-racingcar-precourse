@@ -9,6 +9,7 @@ public class CarRacingGame {
 	private Player player;
 	private Cars cars;
 	private NumberOfRounds numberOfRounds;
+	private RoundRecords roundRecords;
 
 	public void start() {
 		prepare();
@@ -22,17 +23,18 @@ public class CarRacingGame {
 		cars = getCarsUntilValid();
 		View.out(MESSAGE_ON_BEFORE_INPUT_NUMBER_OF_ROUNDS);
 		numberOfRounds = getNumberOfRoundsUntilValid();
+		roundRecords = new RoundRecords();
 	}
 
 	private void play() {
-		for (int i = 0; i < numberOfRounds.getValue(); i++) {
+		for (int r = 0; r < numberOfRounds.getValue(); r++) {
 			cars.drive(new RandomDrivingStrategy());
-			Records records = new Records(cars);
-			View.out(records.toMessage());
+			roundRecords.record(r, cars);
 		}
 	}
 
 	private void end() {
+		View.out(roundRecords.toMessage());
 		Winners winners = new Winners(cars);
 		View.out(winners.toMessage());
 	}

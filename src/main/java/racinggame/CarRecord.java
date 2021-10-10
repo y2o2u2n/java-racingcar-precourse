@@ -1,13 +1,13 @@
 package racinggame;
 
-public class Record {
+public class CarRecord {
 	private static final String MESSAGE_FORMAT = "%s : %s";
 	private static final String HYPHEN = "-";
 
 	private final Name name;
 	private final Position position;
 
-	public Record(Car car) {
+	public CarRecord(Car car) {
 		this.name = car.getName();
 		this.position = car.getPosition();
 	}

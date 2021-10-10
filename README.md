@@ -83,9 +83,13 @@
 - `NumberOfRounds`
     - [x] `Cars`가 `drive`할 횟수이며 사용자 입력으로 주어진다.
     - [x] 값은 0 이상이다.
-- `Records`
-    - [x] `Record` 모음
-- `Record`
+- `RoundRecords`
+    - [x] `RoundRecord` 모음
+- `RoundRecord`
+    - [x] `Round`에 대한 `CarRecords`
+- `CarRecords`
+    - [x] `CarRecord` 모음
+- `CarRecord`
     - [x] `Name`과 `Position`을 기록함
 - `Player`
     - [x] 사용자의 입력을 받아 `Cars`를 만들어낸다.
