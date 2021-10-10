@@ -62,7 +62,7 @@
     - [ ] `forward`하면 `Position`이 1만큼 `increment`한다.
     - [ ] `stop`하면 `Position`이 변경되지 않는다.
 - `Name`
-    - [ ] 1자 이상 5자 이하이다.
+    - [x] 1자 이상 5자 이하이다.
 - `Position`
     - [x] 초기 값은 0이다.
     - [x] `increment`하면 1만큼 증가한다.
