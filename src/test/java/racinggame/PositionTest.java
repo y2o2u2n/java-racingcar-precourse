@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class PositionTest {
@@ -41,5 +42,17 @@ class PositionTest {
 	void equals(int value) {
 		// given & when & then
 		assertThat(new Position(value)).isEqualTo(new Position(value));
+	}
+
+	@DisplayName("비교")
+	@ParameterizedTest
+	@CsvSource({"1,2,-1", "2,1,1", "1,1,0"})
+	void compareTo(int aValue, int bValue, int comparison) {
+		// given & when
+		Position aPosition = new Position(aValue);
+		Position bPosition = new Position(bValue);
+
+		// then
+		assertThat(aPosition.compareTo(bPosition)).isEqualTo(comparison);
 	}
 }

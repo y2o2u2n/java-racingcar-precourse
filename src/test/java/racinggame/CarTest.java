@@ -15,7 +15,7 @@ class CarTest {
 	@ValueSource(strings = {"pobi", "crong", "honux"})
 	void constructor(String name) {
 		// given & when
-		Car car = new Car(new Name(name));
+		Car car = new Car(new Name(name), new Position(0));
 
 		// then
 		assertAll(
@@ -29,7 +29,7 @@ class CarTest {
 	@Test
 	void drive_forward() {
 		// given
-		Car car = new Car(new Name("youn"));
+		Car car = new Car(new Name("youn"), new Position(0));
 
 		// when
 		car.drive(() -> true);
@@ -42,7 +42,7 @@ class CarTest {
 	@Test
 	void drive_stop() {
 		// given
-		Car car = new Car(new Name("youn"));
+		Car car = new Car(new Name("youn"), new Position(0));
 
 		// when
 		car.drive(() -> false);

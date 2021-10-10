@@ -73,7 +73,8 @@
 - `Cars`
     - [x] 자동차 이름이 사용자 입력으로 주어졌을 때 ','로 구분한다.
     - [ ] `Car`들을 `drive`할 수 있다.
-    - [ ] 우승한 `Car`들을 알려줄 수 있다.
+- `Winners`
+    - [x] `Cars`로 우승자들을 알 수 있다.
 - `CarRacingGame`
     - [ ] 주어진 `NumberOfRound` 동안 `Cars`를 `drive`할 수 있다.
     - [ ] 완료한 후 누가 우승했는지 알려준다.

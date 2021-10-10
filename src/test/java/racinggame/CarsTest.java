@@ -19,7 +19,8 @@ class CarsTest {
 		// then
 		assertAll(
 			() -> assertThat(cars).isNotNull(),
-			() -> assertThat(cars.getValues().size()).isEqualTo(namesWithComma.split(",").length)
+			() -> assertThat(cars.isEmpty()).isFalse(),
+			() -> assertThat(cars.getValues()).hasSize(namesWithComma.split(",").length)
 		);
 	}
 }
