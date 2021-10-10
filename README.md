@@ -58,13 +58,13 @@
 
 - `Car`
     - [x] `Car`는 `Name`과 `Position`을 가진다.
+    - [x] `Position`의 초기 값은 0이다.
     - [ ] `drive`하면 `DrivingStrategy`에 따라 `forward`하거나 `stop`한다.
     - [ ] `forward`하면 `Position`이 1만큼 `increment`한다.
     - [ ] `stop`하면 `Position`이 변경되지 않는다.
 - `Name`
     - [x] 1자 이상 5자 이하이다.
 - `Position`
-    - [x] 초기 값은 0이다.
     - [x] `increment`하면 1만큼 증가한다.
 - `DrivingStrategy`
     - [ ] 조건에 따라 `forwardable`한지 판단한다.

@@ -20,7 +20,7 @@ class CarTest {
 		assertAll(
 			() -> assertThat(car).isNotNull(),
 			() -> assertThat(car.getName()).isEqualTo(new Name(name)),
-			() -> assertThat(car.getPosition()).isEqualTo(new Position())
+			() -> assertThat(car.getPosition()).isEqualTo(new Position(0))
 		);
 	}
 }

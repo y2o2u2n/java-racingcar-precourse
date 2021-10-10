@@ -7,8 +7,8 @@ public class Position {
 
 	private int value;
 
-	public Position() {
-		value = INITIAL_VALUE;
+	public Position(int value) {
+		this.value = value;
 	}
 
 	public void increment() {
