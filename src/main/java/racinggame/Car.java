@@ -11,6 +11,16 @@ public class Car {
 		this.position = new Position(INITIAL_POSITION_VALUE);
 	}
 
+	public void drive(DrivingStrategy drivingStrategy) {
+		if (drivingStrategy.movable()) {
+			move();
+		}
+	}
+
+	private void move() {
+		position.increment();
+	}
+
 	public Name getName() {
 		return name;
 	}

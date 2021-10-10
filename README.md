@@ -59,17 +59,16 @@
 - `Car`
     - [x] `Car`는 `Name`과 `Position`을 가진다.
     - [x] `Position`의 초기 값은 0이다.
-    - [ ] `drive`하면 `DrivingStrategy`에 따라 `forward`하거나 `stop`한다.
-    - [ ] `forward`하면 `Position`이 1만큼 `increment`한다.
-    - [ ] `stop`하면 `Position`이 변경되지 않는다.
+    - [x] `drive`하면 `DrivingStrategy`에 따라 `movable`하면 `move`한다.
+    - [x] `move`하면 `Position`이 1만큼 `increment`한다.
 - `Name`
     - [x] 1자 이상 5자 이하이다.
 - `Position`
     - [x] `increment`하면 1만큼 증가한다.
 - `DrivingStrategy`
-    - [ ] 조건에 따라 `forwardable`한지 판단한다.
+    - [x] 조건에 따라 `movable`한지 판단한다.
 - `RandomDrivingStrategy`
-    - [ ] 0~9 사이의 랜덤 값을 구한 후 4 이상일 경우 `forwardable`하다.
+    - [x] 0~9 사이의 랜덤 값을 구한 후 4 이상일 경우 `movable`하다.
 - `Cars`
     - [ ] 자동차 이름이 사용자 입력으로 주어졌을 때 ','로 구분한다.
     - [ ] `Car`들을 `drive`할 수 있다.
