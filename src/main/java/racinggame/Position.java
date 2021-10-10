@@ -9,8 +9,8 @@ public class Position {
 		this.value = value;
 	}
 
-	public Position increment() {
-		return new Position(value + 1);
+	public Position increment(int amount) {
+		return new Position(value + amount);
 	}
 
 	public int getValue() {

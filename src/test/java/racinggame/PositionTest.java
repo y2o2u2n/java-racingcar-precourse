@@ -22,17 +22,17 @@ class PositionTest {
 	@DisplayName("위치를 1만큼 증가시킬 수 있다.")
 	@ParameterizedTest
 	@ValueSource(strings = {"1", "5"})
-	void increment(int countOfIncrement) {
+	void increment(int count) {
 		// given
 		Position position = new Position(0);
 
 		// when
-		for (int i = 0; i < countOfIncrement; i++) {
-			position = position.increment();
+		for (int i = 0; i < count; i++) {
+			position = position.increment(1);
 		}
 
 		// then
-		assertThat(position.getValue()).isEqualTo(countOfIncrement);
+		assertThat(position.getValue()).isEqualTo(count);
 	}
 
 	@DisplayName("동등성")
