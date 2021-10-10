@@ -57,7 +57,7 @@
 #### 구현할 기능 목록
 
 - `Car`
-    - [ ] `Car`는 `Name`과 `Position`을 가진다.
+    - [x] `Car`는 `Name`과 `Position`을 가진다.
     - [ ] `drive`하면 `DrivingStrategy`에 따라 `forward`하거나 `stop`한다.
     - [ ] `forward`하면 `Position`이 1만큼 `increment`한다.
     - [ ] `stop`하면 `Position`이 변경되지 않는다.
