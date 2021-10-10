@@ -3,19 +3,23 @@ package racinggame;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
 class CarTest {
+	private final String name = "youn";
+	private Car car;
+
+	@BeforeEach
+	void setUp() {
+		car = CarFixture.CAR(name);
+	}
 
 	@DisplayName("자동차를 생성할 수 있다.")
-	@ParameterizedTest
-	@ValueSource(strings = {"pobi", "crong", "honux"})
-	void constructor(String name) {
+	@Test
+	void constructor() {
 		// given & when
-		Car car = new Car(name, 0);
 
 		// then
 		assertAll(
@@ -28,10 +32,7 @@ class CarTest {
 	@DisplayName("자동차를 운전해서 전진할 수 있다.")
 	@Test
 	void drive_forward() {
-		// given
-		Car car = new Car("youn", 0);
-
-		// when
+		// given & when
 		car.drive(() -> true);
 
 		// then
@@ -41,10 +42,7 @@ class CarTest {
 	@DisplayName("자동차를 운전해서 멈출 수 있다.")
 	@Test
 	void drive_stop() {
-		// given
-		Car car = new Car("youn", 0);
-
-		// when
+		// given & when
 		car.drive(() -> false);
 
 		// then
