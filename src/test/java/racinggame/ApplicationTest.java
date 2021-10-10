@@ -27,11 +27,14 @@ public class ApplicationTest extends NSTest {
     @Test
     void 전진_정지_여러_라운드() {
         assertRandomTest(() -> {
-                run("pobi,woni,youn", "3");
-                verify("pobi : -", "woni : ", "youn : ---", "최종 우승자는 youn 입니다.");
+                run("pobi,woni,youn", "6");
+                verify("pobi : --", "woni : -", "youn : ------", "최종 우승자는 youn 입니다.");
             },
             MOVING_FORWARD, STOP, MOVING_FORWARD,
             STOP, STOP, MOVING_FORWARD,
+            STOP, STOP, MOVING_FORWARD,
+            MOVING_FORWARD, STOP, MOVING_FORWARD,
+            STOP, MOVING_FORWARD, MOVING_FORWARD,
             STOP, STOP, MOVING_FORWARD);
     }
 
