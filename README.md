@@ -64,8 +64,8 @@
 - `Name`
     - [ ] 1자 이상 5자 이하이다.
 - `Position`
-    - [ ] 처음 값은 0이다.
-    - [ ] `increment`하면 1만큼 증가한다.
+    - [x] 초기 값은 0이다.
+    - [x] `increment`하면 1만큼 증가한다.
 - `DrivingStrategy`
     - [ ] 조건에 따라 `forwardable`한지 판단한다.
 - `RandomDrivingStrategy`
