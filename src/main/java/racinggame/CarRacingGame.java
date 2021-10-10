@@ -25,6 +25,8 @@ public class CarRacingGame {
 	private void play() {
 		for (int i = 0; i < numberOfRounds.getValue(); i++) {
 			cars.drive(new RandomDrivingStrategy());
+			Records records = new Records(cars);
+			View.out(records.toMessage());
 		}
 	}
 
