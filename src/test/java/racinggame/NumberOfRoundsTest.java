@@ -20,7 +20,7 @@ class NumberOfRoundsTest {
 
 	@DisplayName("자연수가 아닐 경우 생성할 수 없다.")
 	@ParameterizedTest
-	@ValueSource(strings = {"-5", "-1"})
+	@ValueSource(strings = {"-5", "-1", "a"})
 	void constructor_fail(String numberStr) {
 		// given & when & then
 		assertThatThrownBy(() -> new NumberOfRounds(numberStr)).isInstanceOf(IllegalArgumentException.class);
