@@ -14,12 +14,16 @@ public class Round {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if (this == o)
+	public boolean equals(Object object) {
+		if (this == object) {
 			return true;
-		if (o == null || getClass() != o.getClass())
+		}
+
+		if (object == null || getClass() != object.getClass()) {
 			return false;
-		Round round = (Round)o;
+		}
+
+		Round round = (Round)object;
 		return value == round.value;
 	}
 
