@@ -27,9 +27,9 @@ public class CarRacingGame {
 	}
 
 	private void play() {
-		for (int r = 0; r < numberOfRounds.getValue(); r++) {
+		for (int round = 0; round < numberOfRounds.getValue(); round++) {
 			cars.drive(new RandomDrivingStrategy());
-			roundRecords.record(r, cars);
+			roundRecords.record(round, cars);
 		}
 	}
 
