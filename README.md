@@ -87,3 +87,7 @@
     - [x] `Record` 모음
 - `Record`
     - [x] `Name`과 `Position`을 기록함
+- `Player`
+    - [x] 사용자의 입력을 받아 `Cars`를 만들어낸다.
+    - [x] 사용자의 입력을 받아 `NumberOfRounds`를 만들어낸다.
+    - [x] 사용자의 입력이 부적절한 경우 `BadInputException`을 만들어낸다.
