@@ -19,9 +19,9 @@ public class CarRacingGame {
 	private void prepare() {
 		player = new Player();
 		View.out(MESSAGE_ON_BEFORE_INPUT_CAR_NAMES);
-		cars = player.inputCarNames(Console.readLine());
+		cars = getCarsUntilValid();
 		View.out(MESSAGE_ON_BEFORE_INPUT_NUMBER_OF_ROUNDS);
-		numberOfRounds = player.inputNumberOfRounds(Console.readLine());
+		numberOfRounds = getNumberOfRoundsUntilValid();
 	}
 
 	private void play() {
@@ -35,5 +35,39 @@ public class CarRacingGame {
 	private void end() {
 		Winners winners = new Winners(cars);
 		View.out(winners.toMessage());
+	}
+
+	private Cars getCarsUntilValid() {
+		Cars cars;
+		do {
+			cars = getCars();
+		} while (cars == null);
+		return cars;
+	}
+
+	private Cars getCars() {
+		try {
+			return player.inputCarNames(Console.readLine());
+		} catch (BadInputException e) {
+			View.out(e);
+			return null;
+		}
+	}
+
+	private NumberOfRounds getNumberOfRoundsUntilValid() {
+		NumberOfRounds numberOfRounds;
+		do {
+			numberOfRounds = getNumberOfRounds();
+		} while (numberOfRounds == null);
+		return numberOfRounds;
+	}
+
+	private NumberOfRounds getNumberOfRounds() {
+		try {
+			return player.inputNumberOfRounds(Console.readLine());
+		} catch (BadInputException e) {
+			View.out(e);
+			return null;
+		}
 	}
 }
