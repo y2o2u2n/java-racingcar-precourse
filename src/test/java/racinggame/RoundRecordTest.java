@@ -20,6 +20,7 @@ public class RoundRecordTest {
 		RoundRecord roundRecord = new RoundRecord(0, cars);
 
 		// then
+		assertThat(roundRecord.getRound()).isEqualTo(new Round(0));
 		assertThat(roundRecord.toMessage())
 			.isEqualTo(
 				"youn : -"

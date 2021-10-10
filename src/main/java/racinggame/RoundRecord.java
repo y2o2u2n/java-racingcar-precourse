@@ -12,4 +12,8 @@ public class RoundRecord {
 	public String toMessage() {
 		return carsRecord.toMessage() + System.lineSeparator();
 	}
+
+	public Round getRound() {
+		return round;
+	}
 }

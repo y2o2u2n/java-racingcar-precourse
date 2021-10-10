@@ -18,4 +18,15 @@ public class RoundTest {
 		// then
 		assertThat(round.getValue()).isEqualTo(value);
 	}
+
+	@DisplayName("동등성")
+	@ParameterizedTest
+	@ValueSource(strings = {"0", "1", "2"})
+	void equals(int value) {
+		// given & then
+		Round round = new Round(value);
+
+		// then
+		assertThat(round).isEqualTo(new Round(value));
+	}
 }
