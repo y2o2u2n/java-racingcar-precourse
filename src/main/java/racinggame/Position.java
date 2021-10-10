@@ -3,8 +3,6 @@ package racinggame;
 import java.util.Objects;
 
 public class Position {
-	private static final int INITIAL_VALUE = 0;
-
 	private int value;
 
 	public Position(int value) {
