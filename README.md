@@ -60,11 +60,12 @@
     - [x] `Car`는 `Name`과 `Position`을 가진다.
     - [x] `Position`의 초기 값은 0이다.
     - [x] `drive`하면 `DrivingStrategy`에 따라 `movable`하면 `move`한다.
-    - [x] `move`하면 `Position`이 1만큼 `increment`한다.
+    - [x] `move`하면 `Position`이 1만큼 증가한다.
 - `Name`
+    - [x] `Car`의 이름이며 불변값이다.
     - [x] 1자 이상 5자 이하이다.
 - `Position`
-    - [x] `increment`하면 1만큼 증가한다.
+    - [x] `Car`의 위치이며 불변값이다.
 - `DrivingStrategy`
     - [x] 조건에 따라 `movable`한지 판단한다.
 - `RandomDrivingStrategy`

@@ -3,14 +3,14 @@ package racinggame;
 import java.util.Objects;
 
 public class Position {
-	private int value;
+	private final int value;
 
 	public Position(int value) {
 		this.value = value;
 	}
 
-	public void increment() {
-		this.value++;
+	public Position increment() {
+		return new Position(value + 1);
 	}
 
 	public int getValue() {

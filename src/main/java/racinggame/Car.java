@@ -4,7 +4,7 @@ public class Car {
 	private static final int INITIAL_POSITION_VALUE = 0;
 
 	private final Name name;
-	private final Position position;
+	private Position position;
 
 	public Car(Name name) {
 		this.name = name;
@@ -18,7 +18,7 @@ public class Car {
 	}
 
 	private void move() {
-		position.increment();
+		position = position.increment();
 	}
 
 	public Name getName() {

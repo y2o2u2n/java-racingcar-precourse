@@ -28,7 +28,7 @@ class PositionTest {
 
 		// when
 		for (int i = 0; i < countOfIncrement; i++) {
-			position.increment();
+			position = position.increment();
 		}
 
 		// then
